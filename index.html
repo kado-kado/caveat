@@ -1,0 +1,137 @@
+　　    　　<html>
+  <head>
+    <title>警告</title>
+     <meta charset="utf-8">
+     <META http-equiv="Refresh" content="35;URL="https://tobari112.github.io/caveat2/">
+  </head>
+  <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1">
+   <BODY onLoad=setTimeout("location.href='https://tobari112.github.io/caveat2/'",35000)>
+   <META http-equiv="Refresh" content="35;URL=https://moddroid.com/apps/category/tor-browser/">
+     <svg viewBox="0 0 576 512" width="100" title="exclamation-triangle">
+  <path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z" />
+</svg>
+     <h1 class="blink" Color="red"><center>あなたのデバイスはウイルスに感染しています。</center></h1>
+    <p class="nones" id="devicename"></p>
+    <p class="null">すぐに対応する必要があります。専用のソフト・アプリをインストールしてウイルスを除去してください。<p>
+    <p class="countdown" id="nokori"></p>
+    <p class="null">であなたの大切な画像が削除され、さらに個人情報も収集されてしまいます。</p>
+     <p class="null">さらにハッカーからの標的になりやすくなり周りの人に被害が及ぶ可能性があります。<p>
+      <p class="null">あなたのデバイスのウイルス感染度</p>
+           <p class="null" id="cup"></p>
+    <center><input type="button" class="button" id="button1" value="いますぐ除去" style="width:300px"></input>
+    <input type="button" class="button" id="button2" value="無視" style="width:300px"></input></center>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<p>※これは、試験用です。</p>
+<p>ver.2.4.0</p>
+  </body>
+   <style>
+    .blink {
+        -webkit-animation: blink 1s ease infinite;
+        animation: blink 1s ease infinite;
+        color: red;
+    }
+    @-webkit-keyframes blink {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    @keyframes blink {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+    .nones {
+        font-size:1.8em;
+    }
+    .countdown {
+        font-size:1.5em;
+    }
+    body {
+        margin:3em;
+      font-size:15px
+    }
+    input {
+        font-size:19px;
+   }
+    .null {
+      font-size:20px
+    }
+  </style>
+  <script type="text/javascript">
+    var ta = document.getElementById('devicename')
+    var msg = ""
+    var ut = navigator.userAgent;
+
+    if(ut.indexOf('iPhone') > 0){
+      msg += "Apple iPhone";
+    }else if(ut.indexOf('iPod') > 0){
+      msg += "Apple iPod";
+    }else if(ut.indexOf('Android') > 0 && ut.indexOf('Mobile') > 0){
+      msg += "Androidスマートフオン";
+    }else if(ut.indexOf('Android') > 0){
+      msg += "Android タブレット";
+    }else if(ut.indexOf('iPad') > 0 ){
+      msg += "Apple iPad";
+    }else{
+      msg +="パソコン";
+    }
+    ta.textContent = "あなたの " + msg + " は(5)つのウイルスに感染しています。";
+    alert( "あなたの " + msg + " は(5)つのウイルスに感染しています。\n閉じる場合は自己責任で")
+    alert("すぐに対応する必要があります。専用のソフト・アプリをインストールしてウイルスを除去してください。");
+    alert("ウイルスに感染するとあなたの大切な画像が削除され、さらに個人情報も収集されてしまいます。")
+    alert("さらにハッカーからの標的になりやすくなり周りの人に被害が及ぶ可能性があります。")
+  </script>
+     <script type="text/javascript">
+        var num = 0.00;
+var tgt = 100.00;
+var speed = 280;
+setInterval(function(){
+if(num <= tgt){
+innerText = num;
+	document.getElementById("cup").innerText = num;
+   num++;
+}
+},speed);
+     </script>
+  <script type="text/javascript">
+    const totalTime = 30000;
+    const oldTime = Date.now();
+
+    const timeId = setInterval(() => {
+    const currentTime = Date.now();
+
+    const diff = currentTime - oldTime;
+
+    const diffSec = totalTime - diff;
+
+    const remainSec = Math.ceil(diffSec / 1000);
+
+    let text = `残り${remainSec}秒`;
+
+    if (diffSec <= 0) {
+      clearInterval(timeId);
+
+      text = "ウイルスが拡散されました。";
+    }
+
+      ta = document.getElementById("nokori")
+      ta.textContent = text;
+    })
+    document.getElementById("button1").onclick = function() {
+      window.location.href = 'https://codepen.io/tobari112/full/xxaKqXy';
+    };
+    document.getElementById("button2").onclick = function() {
+      window.location.href = 'javascript:history.back()';
+    };
+  </script>
+</html>

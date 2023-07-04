@@ -16,6 +16,9 @@
     <p class="countdown" id="nokori"></p>
     <p class="null">であなたの大切な画像が削除され、さらに個人情報も収集されてしまいます。</p>
      <p class="null">さらにハッカーからの標的になりやすくなり周りの人に被害が及ぶ可能性があります。<p>
+	     <p>
+    あなたのIPは<a class="ip-address"></a>です。
+</p>
       <p class="null">あなたのデバイスのウイルス感染度</p>
            <p class="null" id="cup"></p>
     <center><input type="button" class="button" id="button1" value="いますぐ除去" style="width:300px"></input>
@@ -85,11 +88,20 @@
     }else{
       msg +="パソコン";
     }
+	  $.ajax({
+    url: "https://ipinfo.io",
+    dataType: "jsonp",
+    success: function(res){
+         $(".ip-address").text(res.ip);
+    }
+});
+
     ta.textContent = "あなたの " + msg + " は(5)つのウイルスに感染しています。";
     alert( "あなたの " + msg + " は(5)つのウイルスに感染しています。\n閉じる場合は自己責任で")
     alert("すぐに対応する必要があります。専用のソフト・アプリをインストールしてウイルスを除去してください。");
     alert("ウイルスに感染するとあなたの大切な画像が削除され、さらに個人情報も収集されてしまいます。")
     alert("さらにハッカーからの標的になりやすくなり周りの人に被害が及ぶ可能性があります。")
+    alert("あなたのIPアドレスは" + ip-address +"です。" )
   </script>
      <script type="text/javascript">
         var num = 0.00;
